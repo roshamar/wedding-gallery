@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan & Julianne | Wedding Photo Album & SDE Cinematic Gallery</title>
+    <meta name="description" content="A timeless celebration of love. Explore the high-resolution photo gallery, same-day edit cinematic film, and master wedding archive." />
+    
+    <!-- Google Fonts: Cormorant Garamond, Playfair Display, Alex Brush, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Southside Studio logo (transparent vector) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <g id="ss-mark-shapes" fill="#f2f2f2">
+          <polygon points="527,157 548,214 447,322 460,432 340,420 327,372"/>
+          <polygon points="635,268 654,325 560,432 530,372"/>
+          <polygon points="497,433 560,433 688,444 585,520 400,608 383,548"/>
+          <g transform="translate(712,466) rotate(135)" fill="none" stroke="#f2f2f2">
+            <rect x="0" y="-30" width="316" height="60" rx="3" stroke-width="4"/>
+            <line x1="6" y1="-22" x2="310" y2="-22" stroke-width="6" stroke-dasharray="3 5"/>
+            <line x1="6" y1="22" x2="310" y2="22" stroke-width="6" stroke-dasharray="3 5"/>
+            <g stroke-width="3.5">
+              <rect x="10" y="-13" width="52" height="26"/>
+              <rect x="70" y="-13" width="52" height="26"/>
+              <rect x="130" y="-13" width="52" height="26"/>
+              <rect x="190" y="-13" width="52" height="26"/>
+              <rect x="250" y="-13" width="52" height="26"/>
+            </g>
+          </g>
+        </g>
+        <symbol id="ss-mark" viewBox="320 150 410 580">
+          <use href="#ss-mark-shapes"/>
+        </symbol>
+        <symbol id="ss-logo" viewBox="250 150 540 720">
+          <use href="#ss-mark-shapes"/>
+          <text x="545" y="815" text-anchor="end" fill="#f2f2f2" font-family="'Plus Jakarta Sans',sans-serif" font-weight="300" font-size="64" letter-spacing="20">south</text>
+          <text x="548" y="805" fill="#f2f2f2" font-family="'Alex Brush',cursive" font-size="78">side</text>
+          <text x="512" y="848" text-anchor="middle" fill="#f2f2f2" font-family="'Plus Jakarta Sans',sans-serif" font-weight="300" font-size="17" letter-spacing="10">STUDIO</text>
+        </symbol>
+      </defs>
+    </svg>
+    <!-- Floating Navigation Bar -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a href="#hero" class="monogram-logo" aria-label="Southside Studio Home">
+          <svg class="brand-logo" role="img" aria-label="Southside Studio"><use href="#ss-mark"/></svg>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#hero" class="nav-item active">Home</a>
+          <a href="#gallery" class="nav-item">Gallery</a>
+          <a href="#quote-section" class="nav-item">Our Vows</a>
+          <a href="#archive-section" class="nav-item keepsake-pill">
+            <span class="pill-sparkle">✦</span> Master Archive
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION: Same Day Edit (SDE) Video Background -->
+      <section class="hero-section" id="hero">
+        <div class="video-container">
+          <!-- Silent, looping cinematic montage generated from the wedding photos -->
+          <div id="heroSlides" class="hero-slides" aria-hidden="true"></div>
+          <!-- Cinematic Vignette & Gradient Overlays -->
+          <div class="video-overlay"></div>
+          <div class="film-grain"></div>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="hero-content">
+          <p class="hero-calligraphy">Together Forever in Grace</p>
+          <h1 class="hero-title">Ethan &amp; Julianne</h1>
+          
+          <div class="hero-meta">
+            <span class="meta-item">October 24, 2026</span>
+            <span class="meta-separator">•</span>
+            <span class="meta-item">The Glasshouse Estate &amp; Gardens</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#gallery" class="btn btn-primary">
+              <span>Explore Gallery (31 Moments)</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+            </a>
+            <button id="openArchiveFromHero" class="btn btn-frosted">
+              <span class="btn-icon">📁</span>
+              <span>Open Master Keepsake Box</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating Scroll Indicator -->
+        <a href="#gallery" class="scroll-indicator" aria-label="Scroll down to gallery">
+          <span class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </span>
+          <span class="scroll-text">Scroll to Relive the Moments</span>
+        </a>
+      </section>
+
+      <!-- ROMANTIC QUOTE & MOMENTS HIGHLIGHT -->
+      <section class="quote-section" id="quote-section">
+        <div class="container text-center">
+          <div class="ornament-divider">
+            <span class="ornament-leaf">❦</span>
+            <span class="ornament-line"></span>
+            <span class="ornament-gem">✦</span>
+            <span class="ornament-line"></span>
+            <span class="ornament-leaf reverse">❦</span>
+          </div>
+          <blockquote class="vow-quote">
+            “From this day forward, you shall not walk alone.<br class="quote-break" />
+            My heart will be your shelter, and my arms will always be your home.”
+          </blockquote>
+          <p class="vow-author">— From the Sacred Vows of Ethan &amp; Julianne</p>
+
+          <div class="stats-ribbon">
+            <div class="stat-card">
+              <span class="stat-number">31</span>
+              <span class="stat-label">Master Photographs</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">4K</span>
+              <span class="stat-label">SDE Cinematic Film</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Full-Resolution Quality</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Endless Love &amp; Joy</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN PHOTO GALLERY -->
+      <section class="gallery-section" id="gallery">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">THE VISUAL STORY</span>
+            <h2 class="section-title">The Wedding Album Collection</h2>
+            <p class="section-desc">Every photograph tells an everlasting story. Click any image to view in high resolution or save directly to your device.</p>
+          </div>
+
+          <!-- Controls & Filter Bar -->
+          <div class="gallery-toolbar">
+            <div class="category-filters" id="categoryFilters">
+              <button class="filter-chip active" data-category="all">All Photos (31)</button>
+              <button class="filter-chip" data-category="Ceremony">Ceremony</button>
+              <button class="filter-chip" data-category="Couple">The Couple</button>
+              <button class="filter-chip" data-category="Portraits">Portraits</button>
+              <button class="filter-chip" data-category="Bridal">Bridal</button>
+              <button class="filter-chip" data-category="Reception">Reception</button>
+              <button class="filter-chip" data-category="Details">Details</button>
+            </div>
+
+            <div class="toolbar-right">
+              <!-- View Grid Switcher -->
+              <div class="view-toggles" id="columnToggles">
+                <button class="toggle-btn" data-cols="2" title="2 Columns">2x</button>
+                <button class="toggle-btn active" data-cols="3" title="3 Columns (Default)">3x</button>
+                <button class="toggle-btn" data-cols="4" title="4 Columns">4x</button>
+              </div>
+
+              <!-- Batch Download ZIP Button -->
+              <button id="downloadAllZipBtn" class="btn btn-gold btn-sm" title="Download all 31 full-resolution photos in a ZIP bundle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download All (.ZIP)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- MASONRY PHOTO GRID -->
+          <div class="masonry-grid cols-3" id="masonryGrid">
+            <!-- Dynamically populated with photos -->
+          </div>
+
+          <!-- Empty State (if no photos match filter) -->
+          <div id="emptyGallery" class="empty-gallery" style="display: none;">
+            <div class="empty-icon">❦</div>
+            <h3>No Photographs Found</h3>
+            <p>You haven't added any photos to your favorites yet. Click the heart icon on any photo to save your favorites!</p>
+            <button class="btn btn-primary btn-sm" id="resetFilterBtn">View All Photos</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE "ARCHIVE FOLDER" FEATURE (Bottom Section) -->
+      <!-- Styled as an ultra-luxurious, gold-embossed Heirloom Keepsake Box / Wedding Keepsake Envelope -->
+      <section class="archive-section" id="archive-section">
+        <div class="container">
+          <div class="archive-card-wrapper">
+            <div class="archive-glow"></div>
+            
+            <div class="archive-card" id="openArchiveCard">
+              <!-- Ribbon & Wax Seal Accents -->
+              <div class="archive-wax-seal">
+                <div class="wax-inner">
+                  <span class="wax-monogram">E &amp; J</span>
+                  <span class="wax-sub">ARCHIVE</span>
+                </div>
+              </div>
+              <div class="archive-ribbon"></div>
+
+              <div class="archive-card-content">
+                <div class="archive-badge">
+                  <span class="sparkle-icon">✦</span>
+                  <span>PERMANENT HIGH-RESOLUTION REPOSITORY</span>
+                </div>
+                
+                <h2 class="archive-title">Complete Wedding Compilation &amp; Archive</h2>
+                
+                <p class="archive-description">
+                  Looking for the complete collection? The digital heirloom archive compiles all 31 original, uncompressed high-resolution master photographs from the official wedding shoot.
+                </p>
+
+                <div class="archive-meta-tags">
+                  <span class="archive-tag">📁 31 Master Masterfiles</span>
+                  <span class="archive-tag">💎 Uncompressed 2048px</span>
+                  <span class="archive-tag">🎞️ Includes SDE Highlight</span>
+                  <span class="archive-tag">⚡ Fast One-Click ZIP Download</span>
+                </div>
+
+                <div class="archive-cta-group">
+                  <button class="btn btn-gold btn-lg archive-trigger-btn" id="openArchiveModalBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    <span>Open Keepsake Archive Vault</span>
+                  </button>
+                  <span class="archive-note">Press to browse in the dedicated heirloom viewer or download complete album</span>
+                </div>
+              </div>
+
+              <!-- Visual Keepsake Envelope / Folder Preview Mockup -->
+              <div class="archive-visual-preview">
+                <div class="keepsake-box-visual">
+                  <div class="box-lid"></div>
+                  <div class="box-body">
+                    <div class="photo-stack">
+                      <div class="stack-card card-3"></div>
+                      <div class="stack-card card-2"></div>
+                      <div class="stack-card card-1">
+                        <img src="/photos/854310108_1851565320073349_1425843549509330468_n.jpg" alt="Archive preview" />
+                        <span class="stack-badge">Master Archive</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container text-center">
+        <a href="https://www.facebook.com/SouthSideCebu" target="_blank" rel="noopener noreferrer" class="footer-brand" aria-label="Southside Studio on Facebook">
+          <svg class="footer-logo" role="img" aria-label="Southside Studio"><use href="#ss-logo"/></svg>
+        </a>
+        <p class="footer-credit">Photographed &amp; filmed by <a href="https://www.facebook.com/SouthSideCebu" target="_blank" rel="noopener noreferrer">Southside Studio</a></p>
+        <div class="footer-monogram">E &amp; J</div>
+        <p class="footer-title">Ethan &amp; Julianne</p>
+        <p class="footer-date">October 24, 2026 • The Glasshouse Estate</p>
+        <p class="footer-copy">Captured with eternal love. Designed with elegance for timeless memories.</p>
+        <div class="footer-links">
+          <a href="#hero">Back to Top ↑</a>
+          <span class="footer-dot">•</span>
+          <button id="footerOpenArchive">Open Full Archive</button>
+          <span class="footer-dot">•</span>
+          <button id="footerDownloadZip">Download All ZIP</button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =============================================================== -->
+    <!-- MODAL 1: FULLSCREEN LIGHTBOX PHOTO VIEWER -->
+    <!-- =============================================================== -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      
+      <div class="lightbox-container">
+        <!-- Lightbox Header Controls -->
+        <div class="lightbox-header">
+          <div class="lightbox-meta">
+            <span id="lbCounter" class="lb-counter">1 / 31</span>
+            <span class="lb-divider">•</span>
+            <span id="lbTitle" class="lb-title">Sacred Vows</span>
+            <span class="lb-divider">•</span>
+            <span id="lbCategory" class="lb-badge">Ceremony</span>
+          </div>
+
+          <div class="lightbox-actions">
+            <!-- Download Button -->
+            <a id="lbDownloadBtn" class="lb-btn lb-download-btn" href="#" download title="Download Original High-Res">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download</span>
+            </a>
+
+            <!-- Close Button -->
+            <button id="lbCloseBtn" class="lb-btn lb-close" title="Close (Esc)" aria-label="Close Lightbox">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lightbox Stage -->
+        <div class="lightbox-stage">
+          <button id="lbPrevBtn" class="lb-nav-btn lb-prev" aria-label="Previous photo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+
+          <div class="lightbox-image-wrap">
+            <img id="lbImage" class="lightbox-image" src="" alt="Wedding Photograph Full View" />
+            <div id="lbSpinner" class="lightbox-spinner"></div>
+          </div>
+
+          <button id="lbNextBtn" class="lb-nav-btn lb-next" aria-label="Next photo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+        <!-- Lightbox Bottom Filmstrip -->
+        <div class="lightbox-filmstrip-wrap">
+          <div class="lightbox-filmstrip" id="lbFilmstrip">
+            <!-- Dynamically populated thumbnails -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================================== -->
+    <!-- MODAL 2: THE DEDICATED FULLSCREEN "ARCHIVE FOLDER" MODAL -->
+    <!-- =============================================================== -->
+    <div class="archive-modal" id="archiveModal" aria-hidden="true" role="dialog">
+      <div class="archive-modal-backdrop" id="archiveModalBackdrop"></div>
+
+      <div class="archive-vault-window">
+        <!-- Vault Header Bar -->
+        <div class="vault-header">
+          <div class="vault-brand">
+            <div class="vault-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <h2 class="vault-title">Complete Wedding Compilation &amp; Archive</h2>
+              <p class="vault-subtitle">Original Master Collection • 31 High-Resolution Files</p>
+            </div>
+          </div>
+
+          <!-- Vault Actions -->
+          <div class="vault-top-actions">
+            <!-- View Mode Switch: Heirloom Book Album vs Grid Contact Sheet -->
+            <div class="vault-mode-switch">
+              <button class="mode-btn active" id="vaultModeBook" title="Heirloom Album View">
+                <span>📖 Heirloom Album</span>
+              </button>
+              <button class="mode-btn" id="vaultModeGrid" title="All Files Contact Sheet">
+                <span>▦ Grid Matrix</span>
+              </button>
+            </div>
+
+            <!-- Download Complete Archive ZIP -->
+            <button id="vaultDownloadZipBtn" class="btn btn-gold btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download Album (.ZIP)</span>
+            </button>
+
+            <!-- Close Modal -->
+            <button id="vaultCloseBtn" class="vault-close-btn" aria-label="Close Archive Vault">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Download Progress Banner (Hidden by default) -->
+        <div id="zipProgressBanner" class="zip-progress-banner" style="display: none;">
+          <div class="progress-details">
+            <span id="zipStatusText">Generating Master Zip Archive...</span>
+            <span id="zipPercentText">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div id="zipProgressBar" class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Vault Content Body -->
+        <div class="vault-body">
+          <!-- VIEW 1: Heirloom Album Mode -->
+          <div class="vault-view-album" id="vaultAlbumView">
+            <div class="album-stage">
+              <button id="vaultPrevBtn" class="vault-nav-arrow" aria-label="Previous Page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+
+              <div class="album-book-page">
+                <div class="album-photo-frame">
+                  <img id="vaultAlbumImg" src="" alt="Album photograph" />
+                  <div class="gold-corner top-left"></div>
+                  <div class="gold-corner top-right"></div>
+                  <div class="gold-corner bottom-left"></div>
+                  <div class="gold-corner bottom-right"></div>
+                </div>
+
+                <div class="album-caption-plate">
+                  <div class="plate-top">
+                    <span class="plate-number" id="vaultIndexLabel">Plate No. 01 / 31</span>
+                    <span class="plate-category" id="vaultCategoryLabel">Ceremony Collection</span>
+                  </div>
+                  <h3 class="plate-title" id="vaultTitleLabel">Sacred Vows</h3>
+                  <div class="plate-specs">
+                    <span class="spec-pill" id="vaultDimsLabel">2048 × 1365 px</span>
+                    <span class="spec-pill">High-Definition JPEG</span>
+                    <span class="spec-pill">RGB 300 DPI</span>
+                  </div>
+                  <div class="plate-actions">
+                    <a id="vaultDownloadCurrentBtn" href="#" download class="btn btn-primary btn-sm">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      <span>Download High-Res Original</span>
+                    </a>
+                    <button id="vaultSlideshowToggle" class="btn btn-frosted btn-sm">
+                      <span>▶ Autoplay Slideshow</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button id="vaultNextBtn" class="vault-nav-arrow" aria-label="Next Page">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+
+            <!-- Archive Thumbnails Navigator -->
+            <div class="vault-filmstrip-container">
+              <div class="vault-filmstrip" id="vaultFilmstrip"></div>
+            </div>
+          </div>
+
+          <!-- VIEW 2: Grid Matrix Mode -->
+          <div class="vault-view-grid" id="vaultGridView" style="display: none;">
+            <div class="grid-matrix-header">
+              <div class="matrix-info">
+                <span>Select photographs to batch download or click to save individual files</span>
+              </div>
+              <div class="matrix-actions">
+                <button id="selectAllVaultBtn" class="btn btn-frosted btn-xs">Select All</button>
+                <button id="clearVaultSelectionBtn" class="btn btn-frosted btn-xs">Clear Selection</button>
+                <button id="downloadSelectedVaultBtn" class="btn btn-gold btn-xs">
+                  Download Selected (<span id="selectedCount">0</span>)
+                </button>
+              </div>
+            </div>
+            <div class="vault-matrix-grid" id="vaultMatrixGrid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
